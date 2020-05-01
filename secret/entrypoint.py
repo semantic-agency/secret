@@ -5,8 +5,8 @@ from cryptography.fernet import Fernet
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-from shhh.api import api
-from shhh.extensions import db, scheduler
+from secret.api import api
+from secret.extensions import db, scheduler
 
 
 def register_blueprints(app):
@@ -29,13 +29,13 @@ def create_app(env=os.environ.get("FLASK_ENV")):
 
     app.logger.info(f"Loading env {env}")
     configurations = {
-        "dev-local": "shhh.config.DefaultConfig",
-        "dev-docker": "shhh.config.DockerConfig",
-        "heroku": "shhh.config.HerokuConfig",
-        "production": "shhh.config.ProductionConfig",
+        "dev-local": "secret.config.DefaultConfig",
+        "dev-docker": "secret.config.DockerConfig",
+        "heroku": "secret.config.HerokuConfig",
+        "production": "secret.config.ProductionConfig",
     }
     app.config.from_object(
-        configurations.get(env, "shhh.config.ProductionConfig"))
+        configurations.get(env, "secret.config.ProductionConfig"))
 
     db.init_app(app)
     scheduler.init_app(app)
@@ -45,6 +45,6 @@ def create_app(env=os.environ.get("FLASK_ENV")):
         db.create_all()
         scheduler.start()
 
-        from shhh import views
+        from secret import views
 
     return app

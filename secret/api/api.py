@@ -6,8 +6,8 @@ from flask_restful import Api, Resource
 from marshmallow import Schema, fields
 from webargs.flaskparser import use_kwargs
 
-from shhh.api import validators
-from shhh.api.services import create_secret, read_secret
+from secret.api import validators
+from secret.api.services import create_secret, read_secret
 
 api = Blueprint("api", __name__)
 endpoint = Api(api, prefix="/api")

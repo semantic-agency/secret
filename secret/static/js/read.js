@@ -19,7 +19,7 @@ gId("decryptBtn").addEventListener("click", (_) => {
       gId("msg").setAttribute("style", "white-space: pre;");
       switch (data.response.status) {
         case "error":
-          gId("response").className = "notification is-danger";
+          gId("response").className = "notification py-5 w-full notification inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-red-200 text-red-700";
           let msg = "";
           for (const [key, value] of Object.entries(data.response.details.query)) {
             msg += `${value}\n`;
@@ -27,18 +27,18 @@ gId("decryptBtn").addEventListener("click", (_) => {
           gId("msg").textContent = msg;
           return;
         case "invalid":
-          gId("response").className = "notification is-danger";
+          gId("response").className = "notification py-5 w-full notification inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-red-200 text-red-700";
           gId("msg").innerHTML = data.response.msg;
           return;
         case "expired":
-          gId("response").className = "notification is-warning";
+          gId("response").className = "notification py-5 w-full notification inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-yellow-200 text-yellow-700";
           gId("passPhrase").value = "";
           gId("passPhrase").disabled = true;
           gId("decryptBtn").disabled = true;
           gId("msg").innerHTML = data.response.msg;
           return;
         case "success":
-          gId("response").className = "notification is-success";
+          gId("response").className = "notification py-5 w-full notification inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-200 text-indigo-700";
           gId("passPhrase").value = "";
           gId("passPhrase").disabled = true;
           gId("decryptBtn").disabled = true;

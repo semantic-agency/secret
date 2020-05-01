@@ -1,8 +1,8 @@
-.PHONY: dc-start
-dc-start:
+.PHONY: start
+start:
 	@docker-compose -f docker-compose.yml stop;
 	@docker-compose -f docker-compose.yml up --build -d;
 
-.PHONY: dc-stop
-dc-stop:
+.PHONY: stop
+stop:
 	@docker-compose -f docker-compose.yml stop;

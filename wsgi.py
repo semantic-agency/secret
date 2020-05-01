@@ -1,6 +1,6 @@
 import os
 
-from shhh.entrypoint import create_app
+from secret.entrypoint import create_app
 
 app = create_app(os.environ.get("FLASK_ENV"))
 

@@ -11,9 +11,9 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from flask import current_app as app
 from flask import request
 
-from shhh.extensions import db
-from shhh.models import Entries
-from shhh.api.validators import Status
+from secret.extensions import db
+from secret.models import Entries
+from secret.api.validators import Status
 
 
 class Secret:

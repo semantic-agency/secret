@@ -6,5 +6,5 @@ copy.addEventListener("click", (_) => {
   link.select();
   link.setSelectionRange(0, 99999); /* mobile */
   document.execCommand("copy");
-  copy.textContent = "Copied ✅";
+  copy.textContent = "Copied!";
 });

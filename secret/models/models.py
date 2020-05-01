@@ -1,4 +1,4 @@
-from shhh.extensions import db
+from secret.extensions import db
 
 
 class Entries(db.Model):

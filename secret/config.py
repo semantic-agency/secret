@@ -1,6 +1,6 @@
 import os
 
-from shhh.scheduler import delete_expired_links
+from secret.scheduler import delete_expired_links
 
 
 class DefaultConfig:
@@ -22,7 +22,7 @@ class DefaultConfig:
     POSTGRES_USER = os.environ.get("POSTGRES_USER")
     POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")
     POSTGRES_PORT = os.environ.get("POSTGRES_PORT", 5432)
-    POSTGRES_DB = os.environ.get("POSTGRES_DB", "shhh")
+    POSTGRES_DB = os.environ.get("POSTGRES_DB", "secret")
 
     # SqlAlchemy
     SQLALCHEMY_ECHO = True

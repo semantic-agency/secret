@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from shhh.extensions import db, scheduler
-from shhh.models import Entries
+from secret.extensions import db, scheduler
+from secret.models import Entries
 
 
 def delete_expired_links():

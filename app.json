@@ -1,7 +1,7 @@
 {
-  "name": "Shhh",
+  "name": "Secret",
   "description": "Keep secrets out of your emails or chat logs, share them using secure links with passphrase and expiration dates.",
-  "repository": "https://github.com/smallwat3r/shhh",
+  "repository": "https://github.com/semantic-agency/secret",
   "keywords": ["secrets", "security", "password", "encryption", "expire", "protection"],
   "addons": [{
     "plan": "heroku-postgresql",
